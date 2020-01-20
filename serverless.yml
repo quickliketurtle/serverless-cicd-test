@@ -1,0 +1,26 @@
+service: serverless-cicd-test
+
+plugins:
+  - serverless-plugin-cicd
+
+custom:
+  cicd:
+    image: aws/codebuild/amazonlinux2-x86_64-standard:2.0
+    # branch: master
+    # owner: FiveTalent
+    # repository: serverless-cicd-test
+    # githubtoken: abc
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'us-west-2'}
+
+package:
+  exclude:
+    - node_modules/aws-sdk/**/*
+
+functions:
+  hello:
+    handler: src/index.hello
