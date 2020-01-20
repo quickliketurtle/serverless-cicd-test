@@ -6,4 +6,4 @@ phases:
       nodejs: 12
   build:
     commands:
-      - npx serverless deploy --region $AWS_REGION --stage $STAGE
+      - ./node_modules/.bin/serverless deploy --region $AWS_REGION --stage $STAGE
