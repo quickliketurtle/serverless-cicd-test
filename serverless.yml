@@ -6,10 +6,10 @@ plugins:
 custom:
   cicd:
     image: aws/codebuild/amazonlinux2-x86_64-standard:2.0
-    # branch: master
-    # owner: FiveTalent
-    # repository: serverless-cicd-test
-    # githubtoken: abc
+    branch: master
+    owner: quickliketurtle
+    repository: serverless-cicd-test
+    githubtoken: 7817139fc2b93d6899bfb8a9a7fafb8954ab0fff
 
 provider:
   name: aws
